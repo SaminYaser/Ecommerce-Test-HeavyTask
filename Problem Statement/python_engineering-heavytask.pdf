@@ -1,0 +1,703 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+10 0 R
+14 0 R
+16 0 R
+18 0 R
+20 0 R
+22 0 R
+]
+/Count 7
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 9 0 R
+/F3 12 0 R
+/F4 13 0 R
+>>
+>>
+/MediaBox [0.000 0.000 595.280 841.890]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20201205074352+00'00')
+/ModDate (D:20201205074352+00'00')
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 12643 >>
+stream
+
+0.000 0.000 0.000 rg
+BT 34.016 768.985 Td /F1 24.0 Tf  [(Question)] TJ ET
+BT 34.016 735.797 Td /F2 12.0 Tf  [(For this question, you are needed to make a backend system for an e-commerce website and complete the )] TJ ET
+BT 34.016 721.541 Td /F2 12.0 Tf  [(endpoints according to the given output.)] TJ ET
+BT 34.016 686.643 Td /F1 18.0 Tf  [(Requirements)] TJ ET
+BT 34.016 656.021 Td /F2 12.0 Tf  [(Make database models according to the system specifications and complete the api endpoints to match the )] TJ ET
+BT 34.016 641.765 Td /F2 12.0 Tf  [(sample response. Using Django Rest Framework is preferable.)] TJ ET
+BT 34.016 615.509 Td /F1 12.0 Tf  [(N.B:)] TJ ET
+BT 57.680 615.509 Td /F2 12.0 Tf  [( No need to add any authentication module for this.)] TJ ET
+BT 34.016 580.611 Td /F1 18.0 Tf  [(System specification)] TJ ET
+BT 34.016 549.989 Td /F2 12.0 Tf  [(This e-commerce system should support CRUD operations on products. A product has these properties:)] TJ ET
+0.000 0.000 0.000 RG
+57.816 526.838 m 
+57.816 527.388 57.589 527.934 57.201 528.323 c
+56.812 528.712 56.266 528.938 55.716 528.938 c
+55.166 528.938 54.620 528.712 54.231 528.323 c
+53.842 527.934 53.616 527.388 53.616 526.838 c
+53.616 526.288 53.842 525.742 54.231 525.353 c
+54.620 524.965 55.166 524.738 55.716 524.738 c
+56.266 524.738 56.812 524.965 57.201 525.353 c
+57.589 525.742 57.816 526.288 57.816 526.838 c f
+BT 64.016 523.733 Td /F2 12.0 Tf  [(Has a unique id)] TJ ET
+57.816 512.582 m 
+57.816 513.132 57.589 513.678 57.201 514.067 c
+56.812 514.456 56.266 514.682 55.716 514.682 c
+55.166 514.682 54.620 514.456 54.231 514.067 c
+53.842 513.678 53.616 513.132 53.616 512.582 c
+53.616 512.032 53.842 511.486 54.231 511.097 c
+54.620 510.709 55.166 510.482 55.716 510.482 c
+56.266 510.482 56.812 510.709 57.201 511.097 c
+57.589 511.486 57.816 512.032 57.816 512.582 c f
+BT 64.016 509.477 Td /F2 12.0 Tf  [(Product name)] TJ ET
+57.816 498.326 m 
+57.816 498.876 57.589 499.422 57.201 499.811 c
+56.812 500.200 56.266 500.426 55.716 500.426 c
+55.166 500.426 54.620 500.200 54.231 499.811 c
+53.842 499.422 53.616 498.876 53.616 498.326 c
+53.616 497.776 53.842 497.230 54.231 496.841 c
+54.620 496.453 55.166 496.226 55.716 496.226 c
+56.266 496.226 56.812 496.453 57.201 496.841 c
+57.589 497.230 57.816 497.776 57.816 498.326 c f
+BT 64.016 495.221 Td /F2 12.0 Tf  [(A thumbnail and gallery pictures \(all urls\))] TJ ET
+57.816 484.070 m 
+57.816 484.620 57.589 485.166 57.201 485.555 c
+56.812 485.944 56.266 486.170 55.716 486.170 c
+55.166 486.170 54.620 485.944 54.231 485.555 c
+53.842 485.166 53.616 484.620 53.616 484.070 c
+53.616 483.520 53.842 482.974 54.231 482.585 c
+54.620 482.197 55.166 481.970 55.716 481.970 c
+56.266 481.970 56.812 482.197 57.201 482.585 c
+57.589 482.974 57.816 483.520 57.816 484.070 c f
+BT 64.016 480.965 Td /F2 12.0 Tf  [(Description)] TJ ET
+57.816 469.814 m 
+57.816 470.364 57.589 470.910 57.201 471.299 c
+56.812 471.688 56.266 471.914 55.716 471.914 c
+55.166 471.914 54.620 471.688 54.231 471.299 c
+53.842 470.910 53.616 470.364 53.616 469.814 c
+53.616 469.264 53.842 468.718 54.231 468.329 c
+54.620 467.941 55.166 467.714 55.716 467.714 c
+56.266 467.714 56.812 467.941 57.201 468.329 c
+57.589 468.718 57.816 469.264 57.816 469.814 c f
+BT 64.016 466.709 Td /F2 12.0 Tf  [(Price and discounted price \(if there is discount\))] TJ ET
+57.816 455.558 m 
+57.816 456.108 57.589 456.654 57.201 457.043 c
+56.812 457.432 56.266 457.658 55.716 457.658 c
+55.166 457.658 54.620 457.432 54.231 457.043 c
+53.842 456.654 53.616 456.108 53.616 455.558 c
+53.616 455.008 53.842 454.462 54.231 454.073 c
+54.620 453.685 55.166 453.458 55.716 453.458 c
+56.266 453.458 56.812 453.685 57.201 454.073 c
+57.589 454.462 57.816 455.008 57.816 455.558 c f
+BT 64.016 452.453 Td /F2 12.0 Tf  [(Available colours \(this can vary and increase or decrease in future but won't exceed 20\))] TJ ET
+57.816 441.302 m 
+57.816 441.852 57.589 442.398 57.201 442.787 c
+56.812 443.176 56.266 443.402 55.716 443.402 c
+55.166 443.402 54.620 443.176 54.231 442.787 c
+53.842 442.398 53.616 441.852 53.616 441.302 c
+53.616 440.752 53.842 440.206 54.231 439.817 c
+54.620 439.429 55.166 439.202 55.716 439.202 c
+56.266 439.202 56.812 439.429 57.201 439.817 c
+57.589 440.206 57.816 440.752 57.816 441.302 c f
+BT 64.016 438.197 Td /F2 12.0 Tf  [(Availble sizes \(can vary in the future as well but won't exceed 10\))] TJ ET
+57.816 427.046 m 
+57.816 427.596 57.589 428.142 57.201 428.531 c
+56.812 428.920 56.266 429.146 55.716 429.146 c
+55.166 429.146 54.620 428.920 54.231 428.531 c
+53.842 428.142 53.616 427.596 53.616 427.046 c
+53.616 426.496 53.842 425.950 54.231 425.561 c
+54.620 425.173 55.166 424.946 55.716 424.946 c
+56.266 424.946 56.812 425.173 57.201 425.561 c
+57.589 425.950 57.816 426.496 57.816 427.046 c f
+BT 64.016 423.941 Td /F2 12.0 Tf  [(Product rating \(out of 10\))] TJ ET
+BT 34.016 397.685 Td /F2 12.0 Tf  [(Suppose that, our system doesn't need to count the number of remaining items in the inventory and will )] TJ ET
+BT 34.016 383.429 Td /F2 12.0 Tf  [(always have enough products to deliver any order.)] TJ ET
+BT 34.016 357.173 Td /F2 12.0 Tf  [(A customer has these properties:)] TJ ET
+57.816 334.022 m 
+57.816 334.572 57.589 335.118 57.201 335.507 c
+56.812 335.896 56.266 336.122 55.716 336.122 c
+55.166 336.122 54.620 335.896 54.231 335.507 c
+53.842 335.118 53.616 334.572 53.616 334.022 c
+53.616 333.472 53.842 332.926 54.231 332.537 c
+54.620 332.149 55.166 331.922 55.716 331.922 c
+56.266 331.922 56.812 332.149 57.201 332.537 c
+57.589 332.926 57.816 333.472 57.816 334.022 c f
+BT 64.016 330.917 Td /F2 12.0 Tf  [(Has a unique id)] TJ ET
+57.816 319.766 m 
+57.816 320.316 57.589 320.862 57.201 321.251 c
+56.812 321.640 56.266 321.866 55.716 321.866 c
+55.166 321.866 54.620 321.640 54.231 321.251 c
+53.842 320.862 53.616 320.316 53.616 319.766 c
+53.616 319.216 53.842 318.670 54.231 318.281 c
+54.620 317.893 55.166 317.666 55.716 317.666 c
+56.266 317.666 56.812 317.893 57.201 318.281 c
+57.589 318.670 57.816 319.216 57.816 319.766 c f
+BT 64.016 316.661 Td /F2 12.0 Tf  [(Customer name)] TJ ET
+57.816 305.510 m 
+57.816 306.060 57.589 306.606 57.201 306.995 c
+56.812 307.384 56.266 307.610 55.716 307.610 c
+55.166 307.610 54.620 307.384 54.231 306.995 c
+53.842 306.606 53.616 306.060 53.616 305.510 c
+53.616 304.960 53.842 304.414 54.231 304.025 c
+54.620 303.637 55.166 303.410 55.716 303.410 c
+56.266 303.410 56.812 303.637 57.201 304.025 c
+57.589 304.414 57.816 304.960 57.816 305.510 c f
+BT 64.016 302.405 Td /F2 12.0 Tf  [(Mobile number)] TJ ET
+57.816 291.254 m 
+57.816 291.804 57.589 292.350 57.201 292.739 c
+56.812 293.128 56.266 293.354 55.716 293.354 c
+55.166 293.354 54.620 293.128 54.231 292.739 c
+53.842 292.350 53.616 291.804 53.616 291.254 c
+53.616 290.704 53.842 290.158 54.231 289.769 c
+54.620 289.381 55.166 289.154 55.716 289.154 c
+56.266 289.154 56.812 289.381 57.201 289.769 c
+57.589 290.158 57.816 290.704 57.816 291.254 c f
+BT 64.016 288.149 Td /F2 12.0 Tf  [(Email address)] TJ ET
+57.816 276.998 m 
+57.816 277.548 57.589 278.094 57.201 278.483 c
+56.812 278.872 56.266 279.098 55.716 279.098 c
+55.166 279.098 54.620 278.872 54.231 278.483 c
+53.842 278.094 53.616 277.548 53.616 276.998 c
+53.616 276.448 53.842 275.902 54.231 275.513 c
+54.620 275.125 55.166 274.898 55.716 274.898 c
+56.266 274.898 56.812 275.125 57.201 275.513 c
+57.589 275.902 57.816 276.448 57.816 276.998 c f
+BT 64.016 273.893 Td /F2 12.0 Tf  [(Permenant address)] TJ ET
+57.816 262.742 m 
+57.816 263.292 57.589 263.838 57.201 264.227 c
+56.812 264.616 56.266 264.842 55.716 264.842 c
+55.166 264.842 54.620 264.616 54.231 264.227 c
+53.842 263.838 53.616 263.292 53.616 262.742 c
+53.616 262.192 53.842 261.646 54.231 261.257 c
+54.620 260.869 55.166 260.642 55.716 260.642 c
+56.266 260.642 56.812 260.869 57.201 261.257 c
+57.589 261.646 57.816 262.192 57.816 262.742 c f
+BT 64.016 259.637 Td /F2 12.0 Tf  [(Saved address \(customers can save shipping or billing addresses here\))] TJ ET
+57.816 248.486 m 
+57.816 249.036 57.589 249.582 57.201 249.971 c
+56.812 250.360 56.266 250.586 55.716 250.586 c
+55.166 250.586 54.620 250.360 54.231 249.971 c
+53.842 249.582 53.616 249.036 53.616 248.486 c
+53.616 247.936 53.842 247.390 54.231 247.001 c
+54.620 246.613 55.166 246.386 55.716 246.386 c
+56.266 246.386 56.812 246.613 57.201 247.001 c
+57.589 247.390 57.816 247.936 57.816 248.486 c f
+BT 64.016 245.381 Td /F2 12.0 Tf  [(Profile picture \(url\))] TJ ET
+BT 34.016 219.125 Td /F2 12.0 Tf  [(Customers can make orders. Orders can be refunded.)] TJ ET
+BT 34.016 192.869 Td /F2 12.0 Tf  [(An order has these properties:)] TJ ET
+57.816 169.718 m 
+57.816 170.268 57.589 170.814 57.201 171.203 c
+56.812 171.592 56.266 171.818 55.716 171.818 c
+55.166 171.818 54.620 171.592 54.231 171.203 c
+53.842 170.814 53.616 170.268 53.616 169.718 c
+53.616 169.168 53.842 168.622 54.231 168.233 c
+54.620 167.845 55.166 167.618 55.716 167.618 c
+56.266 167.618 56.812 167.845 57.201 168.233 c
+57.589 168.622 57.816 169.168 57.816 169.718 c f
+BT 64.016 166.613 Td /F2 12.0 Tf  [(A unique id)] TJ ET
+57.816 155.462 m 
+57.816 156.012 57.589 156.558 57.201 156.947 c
+56.812 157.336 56.266 157.562 55.716 157.562 c
+55.166 157.562 54.620 157.336 54.231 156.947 c
+53.842 156.558 53.616 156.012 53.616 155.462 c
+53.616 154.912 53.842 154.366 54.231 153.977 c
+54.620 153.589 55.166 153.362 55.716 153.362 c
+56.266 153.362 56.812 153.589 57.201 153.977 c
+57.589 154.366 57.816 154.912 57.816 155.462 c f
+BT 64.016 152.357 Td /F2 12.0 Tf  [(Customer who ordered it)] TJ ET
+57.816 141.206 m 
+57.816 141.756 57.589 142.302 57.201 142.691 c
+56.812 143.080 56.266 143.306 55.716 143.306 c
+55.166 143.306 54.620 143.080 54.231 142.691 c
+53.842 142.302 53.616 141.756 53.616 141.206 c
+53.616 140.656 53.842 140.110 54.231 139.721 c
+54.620 139.333 55.166 139.106 55.716 139.106 c
+56.266 139.106 56.812 139.333 57.201 139.721 c
+57.589 140.110 57.816 140.656 57.816 141.206 c f
+BT 64.016 138.101 Td /F2 12.0 Tf  [(Date)] TJ ET
+57.816 126.950 m 
+57.816 127.500 57.589 128.046 57.201 128.435 c
+56.812 128.824 56.266 129.050 55.716 129.050 c
+55.166 129.050 54.620 128.824 54.231 128.435 c
+53.842 128.046 53.616 127.500 53.616 126.950 c
+53.616 126.400 53.842 125.854 54.231 125.465 c
+54.620 125.077 55.166 124.850 55.716 124.850 c
+56.266 124.850 56.812 125.077 57.201 125.465 c
+57.589 125.854 57.816 126.400 57.816 126.950 c f
+BT 64.016 123.845 Td /F2 12.0 Tf  [(Products ordered)] TJ ET
+57.816 112.694 m 
+57.816 113.244 57.589 113.790 57.201 114.179 c
+56.812 114.568 56.266 114.794 55.716 114.794 c
+55.166 114.794 54.620 114.568 54.231 114.179 c
+53.842 113.790 53.616 113.244 53.616 112.694 c
+53.616 112.144 53.842 111.598 54.231 111.209 c
+54.620 110.821 55.166 110.594 55.716 110.594 c
+56.266 110.594 56.812 110.821 57.201 111.209 c
+57.589 111.598 57.816 112.144 57.816 112.694 c f
+BT 64.016 109.589 Td /F2 12.0 Tf  [(Total price)] TJ ET
+57.816 98.438 m 
+57.816 98.988 57.589 99.534 57.201 99.923 c
+56.812 100.312 56.266 100.538 55.716 100.538 c
+55.166 100.538 54.620 100.312 54.231 99.923 c
+53.842 99.534 53.616 98.988 53.616 98.438 c
+53.616 97.888 53.842 97.342 54.231 96.953 c
+54.620 96.565 55.166 96.338 55.716 96.338 c
+56.266 96.338 56.812 96.565 57.201 96.953 c
+57.589 97.342 57.816 97.888 57.816 98.438 c f
+BT 64.016 95.333 Td /F2 12.0 Tf  [(Delivery status \(In review, Being delivered, Completed, Cancelled\))] TJ ET
+57.816 84.182 m 
+57.816 84.732 57.589 85.278 57.201 85.667 c
+56.812 86.056 56.266 86.282 55.716 86.282 c
+55.166 86.282 54.620 86.056 54.231 85.667 c
+53.842 85.278 53.616 84.732 53.616 84.182 c
+53.616 83.632 53.842 83.086 54.231 82.697 c
+54.620 82.309 55.166 82.082 55.716 82.082 c
+56.266 82.082 56.812 82.309 57.201 82.697 c
+57.589 83.086 57.816 83.632 57.816 84.182 c f
+BT 64.016 81.077 Td /F2 12.0 Tf  [(A refund status \(Yes or No\))] TJ ET
+57.816 69.926 m 
+57.816 70.476 57.589 71.022 57.201 71.411 c
+56.812 71.800 56.266 72.026 55.716 72.026 c
+55.166 72.026 54.620 71.800 54.231 71.411 c
+53.842 71.022 53.616 70.476 53.616 69.926 c
+53.616 69.376 53.842 68.830 54.231 68.441 c
+54.620 68.053 55.166 67.826 55.716 67.826 c
+56.266 67.826 56.812 68.053 57.201 68.441 c
+57.589 68.830 57.816 69.376 57.816 69.926 c f
+BT 64.016 66.821 Td /F2 12.0 Tf  [(Shipping address)] TJ ET
+57.816 55.670 m 
+57.816 56.220 57.589 56.766 57.201 57.155 c
+56.812 57.544 56.266 57.770 55.716 57.770 c
+55.166 57.770 54.620 57.544 54.231 57.155 c
+53.842 56.766 53.616 56.220 53.616 55.670 c
+53.616 55.120 53.842 54.574 54.231 54.185 c
+54.620 53.797 55.166 53.570 55.716 53.570 c
+56.266 53.570 56.812 53.797 57.201 54.185 c
+57.589 54.574 57.816 55.120 57.816 55.670 c f
+BT 64.016 52.565 Td /F2 12.0 Tf  [(Billing address)] TJ ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 11 0 R
+>>
+endobj
+11 0 obj
+<<
+/Length 3023 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+BT 34.016 775.827 Td /F1 18.0 Tf  [(Endpoints and Sample responses)] TJ ET
+BT 34.016 744.957 Td /F3 14.0 Tf  [(/products/)] TJ ET
+BT 34.016 718.523 Td /F2 12.0 Tf  [(Methods: GET, POST)] TJ ET
+BT 34.016 688.279 Td /F1 12.0 Tf  [(Sample response)] TJ ET
+BT 34.016 659.507 Td /F4 12.0 Tf  [([)] TJ ET
+BT 34.016 647.057 Td /F4 12.0 Tf  [(    {)] TJ ET
+BT 34.016 634.607 Td /F4 12.0 Tf  [(        "id": 1,)] TJ ET
+BT 34.016 622.157 Td /F4 12.0 Tf  [(        "name": "Mobile cover",)] TJ ET
+BT 34.016 609.706 Td /F4 12.0 Tf  [(        "price": 200,)] TJ ET
+BT 34.016 597.256 Td /F4 12.0 Tf  [(        "is_discounted": false,)] TJ ET
+BT 34.016 584.806 Td /F4 12.0 Tf  [(        "discounted_price": null,)] TJ ET
+BT 34.016 572.356 Td /F4 12.0 Tf  [(        "thumbnail": "https://www.google.com")] TJ ET
+BT 34.016 559.905 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 547.455 Td /F4 12.0 Tf  [(    {)] TJ ET
+BT 34.016 535.005 Td /F4 12.0 Tf  [(        "id": 2,)] TJ ET
+BT 34.016 522.555 Td /F4 12.0 Tf  [(        "name": "Apple airpods",)] TJ ET
+BT 34.016 510.104 Td /F4 12.0 Tf  [(        "price": 2000,)] TJ ET
+BT 34.016 497.654 Td /F4 12.0 Tf  [(        "is_discounted": true,)] TJ ET
+BT 34.016 485.204 Td /F4 12.0 Tf  [(        "discounted_price": 1500,)] TJ ET
+BT 34.016 472.754 Td /F4 12.0 Tf  [(        "thumbnail": "https://www.yahoo.com")] TJ ET
+BT 34.016 460.303 Td /F4 12.0 Tf  [(    })] TJ ET
+BT 34.016 447.853 Td /F4 12.0 Tf  [(])] TJ ET
+BT 34.016 417.998 Td /F1 12.0 Tf  [(Sample POST request)] TJ ET
+BT 34.016 389.227 Td /F4 12.0 Tf  [({)] TJ ET
+BT 34.016 376.777 Td /F4 12.0 Tf  [(    "name": "Apple airpods",)] TJ ET
+BT 34.016 364.326 Td /F4 12.0 Tf  [(    "price": 2000,)] TJ ET
+BT 34.016 351.876 Td /F4 12.0 Tf  [(    "is_discounted": true,)] TJ ET
+BT 34.016 339.426 Td /F4 12.0 Tf  [(    "discounted_price": 1500,)] TJ ET
+BT 34.016 326.976 Td /F4 12.0 Tf  [(    "thumbnail": "https://www.yahoo.com",)] TJ ET
+BT 34.016 314.526 Td /F4 12.0 Tf  [(    "gallery": [)] TJ ET
+BT 34.016 302.075 Td /F4 12.0 Tf  [(        "https://www.facebook.com",)] TJ ET
+BT 34.016 289.625 Td /F4 12.0 Tf  [(        "https://www.twitter.com",)] TJ ET
+BT 34.016 277.175 Td /F4 12.0 Tf  [(        "https://www.youtube.com")] TJ ET
+BT 34.016 264.725 Td /F4 12.0 Tf  [(    ],)] TJ ET
+BT 34.016 252.274 Td /F4 12.0 Tf  [(    "rating": 8.15,)] TJ ET
+BT 34.016 239.824 Td /F4 12.0 Tf  [(    "available_colours": [)] TJ ET
+BT 34.016 227.374 Td /F4 12.0 Tf  [(        "red",)] TJ ET
+BT 34.016 214.924 Td /F4 12.0 Tf  [(        "silver",)] TJ ET
+BT 34.016 202.473 Td /F4 12.0 Tf  [(        "black",)] TJ ET
+BT 34.016 190.023 Td /F4 12.0 Tf  [(        "white",)] TJ ET
+BT 34.016 177.573 Td /F4 12.0 Tf  [(        "gold")] TJ ET
+BT 34.016 165.123 Td /F4 12.0 Tf  [(    ],)] TJ ET
+BT 34.016 152.672 Td /F4 12.0 Tf  [(    "available_sizes": [],)] TJ ET
+BT 34.016 140.222 Td /F4 12.0 Tf  [(    "description": "Airpod from apple. Your best music companion")] TJ ET
+BT 34.016 127.772 Td /F4 12.0 Tf  [(})] TJ ET
+endstream
+endobj
+12 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F3
+/BaseFont /Courier-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+13 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F4
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+>>
+endobj
+14 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 15 0 R
+>>
+endobj
+15 0 obj
+<<
+/Length 3003 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+BT 34.016 782.181 Td /F3 14.0 Tf  [(/products/id)] TJ ET
+BT 34.016 757.787 Td /F2 12.0 Tf  [(Methods: GET, PATCH, PUT, DELETE)] TJ ET
+BT 34.016 727.543 Td /F1 12.0 Tf  [(Sample response)] TJ ET
+BT 34.016 698.771 Td /F4 12.0 Tf  [({)] TJ ET
+BT 34.016 686.321 Td /F4 12.0 Tf  [(    "id": 2,)] TJ ET
+BT 34.016 673.871 Td /F4 12.0 Tf  [(    "name": "Apple airpods",)] TJ ET
+BT 34.016 661.421 Td /F4 12.0 Tf  [(    "price": 2000,)] TJ ET
+BT 34.016 648.970 Td /F4 12.0 Tf  [(    "is_discounted": true,)] TJ ET
+BT 34.016 636.520 Td /F4 12.0 Tf  [(    "discounted_price": 1500,)] TJ ET
+BT 34.016 624.070 Td /F4 12.0 Tf  [(    "thumbnail": "https://www.yahoo.com",)] TJ ET
+BT 34.016 611.620 Td /F4 12.0 Tf  [(    "gallery": [)] TJ ET
+BT 34.016 599.169 Td /F4 12.0 Tf  [(        "https://www.facebook.com",)] TJ ET
+BT 34.016 586.719 Td /F4 12.0 Tf  [(        "https://www.twitter.com",)] TJ ET
+BT 34.016 574.269 Td /F4 12.0 Tf  [(        "https://www.youtube.com")] TJ ET
+BT 34.016 561.819 Td /F4 12.0 Tf  [(    ],)] TJ ET
+BT 34.016 549.368 Td /F4 12.0 Tf  [(    "rating": 8.15,)] TJ ET
+BT 34.016 536.918 Td /F4 12.0 Tf  [(    "available_colours": [)] TJ ET
+BT 34.016 524.468 Td /F4 12.0 Tf  [(        "red",)] TJ ET
+BT 34.016 512.018 Td /F4 12.0 Tf  [(        "silver",)] TJ ET
+BT 34.016 499.567 Td /F4 12.0 Tf  [(        "black",)] TJ ET
+BT 34.016 487.117 Td /F4 12.0 Tf  [(        "white",)] TJ ET
+BT 34.016 474.667 Td /F4 12.0 Tf  [(        "gold")] TJ ET
+BT 34.016 462.217 Td /F4 12.0 Tf  [(    ],)] TJ ET
+BT 34.016 449.766 Td /F4 12.0 Tf  [(    "available_sizes": [],)] TJ ET
+BT 34.016 437.316 Td /F4 12.0 Tf  [(    "description": "Airpod from apple. Your best music companion")] TJ ET
+BT 34.016 424.866 Td /F4 12.0 Tf  [(})] TJ ET
+BT 34.016 398.723 Td /F3 14.0 Tf  [(/customers/)] TJ ET
+BT 34.016 372.289 Td /F2 12.0 Tf  [(Methods: GET, POST )] TJ ET
+BT 34.016 342.044 Td /F1 12.0 Tf  [(Sample response)] TJ ET
+BT 34.016 313.273 Td /F4 12.0 Tf  [([)] TJ ET
+BT 34.016 300.823 Td /F4 12.0 Tf  [(    {)] TJ ET
+BT 34.016 288.372 Td /F4 12.0 Tf  [(        "id": 1,)] TJ ET
+BT 34.016 275.922 Td /F4 12.0 Tf  [(        "name": "Elon Musk",)] TJ ET
+BT 34.016 263.472 Td /F4 12.0 Tf  [(        "email": "musk@gmail.com",)] TJ ET
+BT 34.016 251.022 Td /F4 12.0 Tf  [(        "mobile_number": "+880122222",)] TJ ET
+BT 34.016 238.572 Td /F4 12.0 Tf  [(        "profile_picture": "https://www.google.com")] TJ ET
+BT 34.016 226.121 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 213.671 Td /F4 12.0 Tf  [(    {)] TJ ET
+BT 34.016 201.221 Td /F4 12.0 Tf  [(        "id": 2,)] TJ ET
+BT 34.016 188.771 Td /F4 12.0 Tf  [(        "name": "Bill Gates",)] TJ ET
+BT 34.016 176.320 Td /F4 12.0 Tf  [(        "email": "gates@hotmail.com",)] TJ ET
+BT 34.016 163.870 Td /F4 12.0 Tf  [(        "mobile_number": null,)] TJ ET
+BT 34.016 151.420 Td /F4 12.0 Tf  [(        "profile_picture": null)] TJ ET
+BT 34.016 138.970 Td /F4 12.0 Tf  [(    })] TJ ET
+BT 34.016 126.519 Td /F4 12.0 Tf  [(])] TJ ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 17 0 R
+>>
+endobj
+17 0 obj
+<<
+/Length 2526 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+BT 34.016 780.509 Td /F1 12.0 Tf  [(Sample POST request)] TJ ET
+BT 34.016 751.738 Td /F4 12.0 Tf  [({)] TJ ET
+BT 34.016 739.288 Td /F4 12.0 Tf  [(    "name": "Bill Gates",)] TJ ET
+BT 34.016 726.838 Td /F4 12.0 Tf  [(    "email": "gates@hotmail.com",)] TJ ET
+BT 34.016 714.387 Td /F4 12.0 Tf  [(    "mobile_number": null,)] TJ ET
+BT 34.016 701.937 Td /F4 12.0 Tf  [(    "profile_picture": null,)] TJ ET
+BT 34.016 689.487 Td /F4 12.0 Tf  [(    "permanent_address": {)] TJ ET
+BT 34.016 677.037 Td /F4 12.0 Tf  [(        "name": "permenant",)] TJ ET
+BT 34.016 664.586 Td /F4 12.0 Tf  [(        "address": "P. Sherman, 42, Wallaby way, Sydney")] TJ ET
+BT 34.016 652.136 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 639.686 Td /F4 12.0 Tf  [(    "saved_addresses": [)] TJ ET
+BT 34.016 627.236 Td /F4 12.0 Tf  [(        {)] TJ ET
+BT 34.016 614.785 Td /F4 12.0 Tf  [(            "name": "home",)] TJ ET
+BT 34.016 602.335 Td /F4 12.0 Tf  [(            "address": "120, Rosemary lane, London, England")] TJ ET
+BT 34.016 589.885 Td /F4 12.0 Tf  [(        })] TJ ET
+BT 34.016 577.435 Td /F4 12.0 Tf  [(    ])] TJ ET
+BT 34.016 564.984 Td /F4 12.0 Tf  [(})] TJ ET
+BT 34.016 538.841 Td /F3 14.0 Tf  [(/customers/id)] TJ ET
+BT 34.016 512.408 Td /F2 12.0 Tf  [(Methods: GET, PATCH, PUT, DELETE)] TJ ET
+BT 34.016 482.163 Td /F1 12.0 Tf  [(Sample response)] TJ ET
+BT 34.016 453.391 Td /F4 12.0 Tf  [({)] TJ ET
+BT 34.016 440.941 Td /F4 12.0 Tf  [(    "id": 2,)] TJ ET
+BT 34.016 428.491 Td /F4 12.0 Tf  [(    "name": "Bill Gates",)] TJ ET
+BT 34.016 416.041 Td /F4 12.0 Tf  [(    "email": "gates@hotmail.com",)] TJ ET
+BT 34.016 403.590 Td /F4 12.0 Tf  [(    "mobile_number": null,)] TJ ET
+BT 34.016 391.140 Td /F4 12.0 Tf  [(    "profile_picture": null,)] TJ ET
+BT 34.016 378.690 Td /F4 12.0 Tf  [(    "permanent_address": {)] TJ ET
+BT 34.016 366.240 Td /F4 12.0 Tf  [(        "name": "permenant",)] TJ ET
+BT 34.016 353.790 Td /F4 12.0 Tf  [(        "address": "P. Sherman, 42, Wallaby way, Sydney")] TJ ET
+BT 34.016 341.339 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 328.889 Td /F4 12.0 Tf  [(    "saved_addresses": [)] TJ ET
+BT 34.016 316.439 Td /F4 12.0 Tf  [(        {)] TJ ET
+BT 34.016 303.989 Td /F4 12.0 Tf  [(            "name": "home",)] TJ ET
+BT 34.016 291.538 Td /F4 12.0 Tf  [(            "address": "120, Rosemary lane, London, England")] TJ ET
+BT 34.016 279.088 Td /F4 12.0 Tf  [(        })] TJ ET
+BT 34.016 266.638 Td /F4 12.0 Tf  [(    ])] TJ ET
+BT 34.016 254.188 Td /F4 12.0 Tf  [(})] TJ ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 19 0 R
+>>
+endobj
+19 0 obj
+<<
+/Length 1927 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+BT 34.016 782.181 Td /F3 14.0 Tf  [(/orders/)] TJ ET
+BT 34.016 757.787 Td /F2 12.0 Tf  [(Methods: GET, POST)] TJ ET
+BT 34.016 727.543 Td /F1 12.0 Tf  [(Sample response)] TJ ET
+BT 34.016 698.771 Td /F4 12.0 Tf  [([)] TJ ET
+BT 34.016 686.321 Td /F4 12.0 Tf  [(    {)] TJ ET
+BT 34.016 673.871 Td /F4 12.0 Tf  [(        "id": 1,)] TJ ET
+BT 34.016 661.421 Td /F4 12.0 Tf  [(        "customer_id": 1,)] TJ ET
+BT 34.016 648.970 Td /F4 12.0 Tf  [(        "total_price": 200,)] TJ ET
+BT 34.016 636.520 Td /F4 12.0 Tf  [(        "delivery_status": "completed",)] TJ ET
+BT 34.016 624.070 Td /F4 12.0 Tf  [(        "refund_status": false,)] TJ ET
+BT 34.016 611.620 Td /F4 12.0 Tf  [(        "date": "2020-12-04")] TJ ET
+BT 34.016 599.169 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 586.719 Td /F4 12.0 Tf  [(    {)] TJ ET
+BT 34.016 574.269 Td /F4 12.0 Tf  [(        "id": 2,)] TJ ET
+BT 34.016 561.819 Td /F4 12.0 Tf  [(        "customer_id": 2,)] TJ ET
+BT 34.016 549.368 Td /F4 12.0 Tf  [(        "total_price": 2000,)] TJ ET
+BT 34.016 536.918 Td /F4 12.0 Tf  [(        "delivery_status": "completed",)] TJ ET
+BT 34.016 524.468 Td /F4 12.0 Tf  [(        "refund_status": true,)] TJ ET
+BT 34.016 512.018 Td /F4 12.0 Tf  [(        "date": "2020-11-04")] TJ ET
+BT 34.016 499.567 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 487.117 Td /F4 12.0 Tf  [(    {)] TJ ET
+BT 34.016 474.667 Td /F4 12.0 Tf  [(        "id": 3,)] TJ ET
+BT 34.016 462.217 Td /F4 12.0 Tf  [(        "customer_id": 2,)] TJ ET
+BT 34.016 449.766 Td /F4 12.0 Tf  [(        "total_price": 1500,)] TJ ET
+BT 34.016 437.316 Td /F4 12.0 Tf  [(        "delivery_status": "being delivered",)] TJ ET
+BT 34.016 424.866 Td /F4 12.0 Tf  [(        "refund_status": false,)] TJ ET
+BT 34.016 412.416 Td /F4 12.0 Tf  [(        "date": "2020-12-04")] TJ ET
+BT 34.016 399.966 Td /F4 12.0 Tf  [(    })] TJ ET
+BT 34.016 387.515 Td /F4 12.0 Tf  [(])] TJ ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 21 0 R
+>>
+endobj
+21 0 obj
+<<
+/Length 1598 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+BT 34.016 780.509 Td /F1 12.0 Tf  [(Sample POST request)] TJ ET
+BT 34.016 751.738 Td /F4 12.0 Tf  [({)] TJ ET
+BT 34.016 739.288 Td /F4 12.0 Tf  [(    "customer_id": 2,)] TJ ET
+BT 34.016 726.838 Td /F4 12.0 Tf  [(    "total_price": 2000,)] TJ ET
+BT 34.016 714.387 Td /F4 12.0 Tf  [(    "delivery_status": "completed",)] TJ ET
+BT 34.016 701.937 Td /F4 12.0 Tf  [(    "refund_status": true,)] TJ ET
+BT 34.016 689.487 Td /F4 12.0 Tf  [(    "date": "2020-11-04",)] TJ ET
+BT 34.016 677.037 Td /F4 12.0 Tf  [(    "product_list": [)] TJ ET
+BT 34.016 664.586 Td /F4 12.0 Tf  [(        {)] TJ ET
+BT 34.016 652.136 Td /F4 12.0 Tf  [(            "id": 2,)] TJ ET
+BT 34.016 639.686 Td /F4 12.0 Tf  [(            "quantity": 1,)] TJ ET
+BT 34.016 627.236 Td /F4 12.0 Tf  [(            "price": 2000,)] TJ ET
+BT 34.016 614.785 Td /F4 12.0 Tf  [(            "colour": "black",)] TJ ET
+BT 34.016 602.335 Td /F4 12.0 Tf  [(            "size": null)] TJ ET
+BT 34.016 589.885 Td /F4 12.0 Tf  [(        })] TJ ET
+BT 34.016 577.435 Td /F4 12.0 Tf  [(    ],)] TJ ET
+BT 34.016 564.984 Td /F4 12.0 Tf  [(    "billing_address": {)] TJ ET
+BT 34.016 552.534 Td /F4 12.0 Tf  [(        "name": "home")] TJ ET
+BT 34.016 540.084 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 527.634 Td /F4 12.0 Tf  [(    "shipping_address": {)] TJ ET
+BT 34.016 515.183 Td /F4 12.0 Tf  [(        "name": null,)] TJ ET
+BT 34.016 502.733 Td /F4 12.0 Tf  [(        "address": "12/A Baker street, New London")] TJ ET
+BT 34.016 490.283 Td /F4 12.0 Tf  [(    })] TJ ET
+BT 34.016 477.833 Td /F4 12.0 Tf  [(})] TJ ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 23 0 R
+>>
+endobj
+23 0 obj
+<<
+/Length 1885 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+BT 34.016 782.181 Td /F3 14.0 Tf  [(/orders/id)] TJ ET
+BT 34.016 757.787 Td /F2 12.0 Tf  [(Methods: GET, PATCH, PUT, DELETE)] TJ ET
+BT 34.016 727.543 Td /F1 12.0 Tf  [(Sample response)] TJ ET
+BT 34.016 698.771 Td /F4 12.0 Tf  [({)] TJ ET
+BT 34.016 686.321 Td /F4 12.0 Tf  [(    "id": 2,)] TJ ET
+BT 34.016 673.871 Td /F4 12.0 Tf  [(    "customer_id": 2,)] TJ ET
+BT 34.016 661.421 Td /F4 12.0 Tf  [(    "total_price": 2000,)] TJ ET
+BT 34.016 648.970 Td /F4 12.0 Tf  [(    "delivery_status": "completed",)] TJ ET
+BT 34.016 636.520 Td /F4 12.0 Tf  [(    "refund_status": true,)] TJ ET
+BT 34.016 624.070 Td /F4 12.0 Tf  [(    "date": "2020-11-04",)] TJ ET
+BT 34.016 611.620 Td /F4 12.0 Tf  [(    "product_list": [)] TJ ET
+BT 34.016 599.169 Td /F4 12.0 Tf  [(        {)] TJ ET
+BT 34.016 586.719 Td /F4 12.0 Tf  [(            "id": 2,)] TJ ET
+BT 34.016 574.269 Td /F4 12.0 Tf  [(            "quantity": 1,)] TJ ET
+BT 34.016 561.819 Td /F4 12.0 Tf  [(            "price": 2000,)] TJ ET
+BT 34.016 549.368 Td /F4 12.0 Tf  [(            "colour": "black",)] TJ ET
+BT 34.016 536.918 Td /F4 12.0 Tf  [(            "size": null)] TJ ET
+BT 34.016 524.468 Td /F4 12.0 Tf  [(        })] TJ ET
+BT 34.016 512.018 Td /F4 12.0 Tf  [(    ],)] TJ ET
+BT 34.016 499.567 Td /F4 12.0 Tf  [(    "billing_address": {)] TJ ET
+BT 34.016 487.117 Td /F4 12.0 Tf  [(        "name": "home",)] TJ ET
+BT 34.016 474.667 Td /F4 12.0 Tf  [(        "address": "120, Rosemary lane, London, England")] TJ ET
+BT 34.016 462.217 Td /F4 12.0 Tf  [(    },)] TJ ET
+BT 34.016 449.766 Td /F4 12.0 Tf  [(    "shipping_address": {)] TJ ET
+BT 34.016 437.316 Td /F4 12.0 Tf  [(        "name": null,)] TJ ET
+BT 34.016 424.866 Td /F4 12.0 Tf  [(        "address": "12/A Baker street, New London")] TJ ET
+BT 34.016 412.416 Td /F4 12.0 Tf  [(    })] TJ ET
+BT 34.016 399.966 Td /F4 12.0 Tf  [(})] TJ ET
+endstream
+endobj
+xref
+0 24
+0000000000 65535 f 
+0000000009 00000 n 
+0000000074 00000 n 
+0000000120 00000 n 
+0000000348 00000 n 
+0000000377 00000 n 
+0000000491 00000 n 
+0000000554 00000 n 
+0000013250 00000 n 
+0000013358 00000 n 
+0000013467 00000 n 
+0000013532 00000 n 
+0000016608 00000 n 
+0000016719 00000 n 
+0000016825 00000 n 
+0000016890 00000 n 
+0000019946 00000 n 
+0000020011 00000 n 
+0000022590 00000 n 
+0000022655 00000 n 
+0000024635 00000 n 
+0000024700 00000 n 
+0000026351 00000 n 
+0000026416 00000 n 
+trailer
+<<
+/Size 24
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+28354
+%%EOF
+6 0 obj
+<</Type /Page /Parent 3 0 R /Contents 7 0 R /Annots 26 0 R >> 
+endobj
+24 0 obj
+<</Type /Annot /Rect [34 636.89 544 665.89 ] /Subtype /Highlight /QuadPoints [496 665.89 544 665.89 496 651.89 544 651.89 34 651.89 117 651.89 34 636.89 117 636.89 ] /M (D:20201206175832+06'00) /C [1 1 0 ] /Popup 25 0 R /T (þÿ S a m i n) /P 6 0 R /Contents (þÿ) >> 
+endobj
+25 0 obj
+<</Type /Annot /Rect [115.6493223143 485.5966142502 315.6493223143 635.5966142502 ] /Subtype /Popup /M (D:20201206175829+06'00) /Parent 24 0 R /P 6 0 R >> 
+endobj
+26 0 obj
+[24 0 R 25 0 R ] 
+endobj
+xref
+0 1
+0000000001 65535 f
+6 1
+0000028913 00000 n
+24 3
+0000028994 00000 n
+0000029279 00000 n
+0000029454 00000 n
+trailer
+<</Size 27 /Root 1 0 R /Prev 28354 /Info 5 0 R >> 
+startxref
+29491
+%%EOF
