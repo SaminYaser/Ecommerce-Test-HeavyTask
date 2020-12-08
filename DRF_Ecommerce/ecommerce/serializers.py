@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, Customer
+from .models import Product, Customer, Order
 
 class DynamicFieldsModelSerializer(serializers.ModelSerializer):
     """
@@ -55,4 +55,19 @@ class CustomerSerializer (DynamicFieldsModelSerializer):
             'profile_picture',
             'permanent_address',
             'saved_addresses'
+        ]
+
+class OrderSerializer (DynamicFieldsModelSerializer):
+
+    class Meta:
+        model = Order
+        fields = [
+            'customer_id',
+            'total_price',
+            'delivery_status',
+            'refund_status',
+            'date',
+            'product_list',
+            'billing_address',
+            'shipping_address'
         ]

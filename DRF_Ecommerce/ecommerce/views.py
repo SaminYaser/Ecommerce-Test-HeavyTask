@@ -6,8 +6,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Product, Customer
-from .serializers import ProductSerializer, CustomerSerializer
+from .models import Product, Customer, Order
+from .serializers import ProductSerializer, CustomerSerializer, OrderSerializer
 
 class BoilerClass (APIView):
     """
@@ -27,6 +27,7 @@ class BoilerClass (APIView):
     
     def post(self, request):
         serializer = self.boilerSerializer(data=request.data)
+        print(request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -75,7 +76,6 @@ class BoilerClassForIndividuals (APIView):
 # Product Views classes
 ## /products/
 class ProductAPIView (BoilerClass):
-    
     def __init__(self):
         super().__init__(model=Product, serializer=ProductSerializer, fields=[
             'id',
@@ -95,7 +95,6 @@ class ProductDetailsAPIView (BoilerClassForIndividuals):
 # Customer Views classes
 ## /customers/
 class CustomerAPIView (BoilerClass):
-
     def __init__(self):
         super().__init__(model=Customer, serializer=CustomerSerializer, fields=[
             'id',
@@ -105,6 +104,24 @@ class CustomerAPIView (BoilerClass):
             'profile_picture'
         ])
 ## /customers/:id/
-class CustomerDetailsAPIView (APIView):
+class CustomerDetailsAPIView (BoilerClassForIndividuals):
     def __init__(self):
         super().__init__(model=Customer, serializer=CustomerSerializer)
+
+
+# Order Views classes
+## /orders/
+class OrderAPIView (BoilerClass):
+    def __init__(self):
+        super().__init__(model=Order, serializer=OrderSerializer, fields=[
+            'id',
+            'customer_id',
+            'total_price',
+            'delivery_status',
+            'refund_status',
+            'date'
+        ])
+## /orders/:id/
+class OrderDetailsAPIView (BoilerClassForIndividuals):
+    def __init__(self):
+        super().__init__(model=Order, serializer=OrderSerializer)
