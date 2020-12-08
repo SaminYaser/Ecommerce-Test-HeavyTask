@@ -3,8 +3,6 @@ from django.contrib.postgres.fields import ArrayField
 from django.core.validators import MaxValueValidator, MinValueValidator, validate_comma_separated_integer_list
 from phonenumber_field.modelfields import PhoneNumberField
 
-# Create your models here.
-
 class Product (models.Model):
     name = models.CharField(max_length=50, null=False)
     price = models.IntegerField (validators=[MinValueValidator(0)], default=0)
@@ -15,8 +13,8 @@ class Product (models.Model):
             models.CharField(max_length=1000)
     )
     rating = models.DecimalField(
-        decimal_places=1,
-        max_digits=2,
+        decimal_places=2,
+        max_digits=4,
         default=None, blank=True, null=True,
         validators=[
             MaxValueValidator(10),
