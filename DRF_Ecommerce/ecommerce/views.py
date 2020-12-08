@@ -9,70 +9,14 @@ from rest_framework.views import APIView
 from .models import Product, Customer
 from .serializers import ProductSerializer, CustomerSerializer
 
-from django.db import models
-
 # Create your views here.
 
-class BoilerClass (APIView):
 
-    def __init__(self, model, serializer, fields):
-        self.boilerModel = model
-        self.boilerSerializer = serializer
-        self.bulkGetFields = fields
-
+class ProductAPIView (APIView):
+    
     def get(self, request):
-        instances = self.boilerModel.objects.all()
-        serializer = self.boilerSerializer(instances, many=True, fields=self.bulkGetFields)
-        return Response(serializer.data)
-    
-    def post(self, request):
-        serializer = self.boilerSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
-
-class BoilerClassForIndividuals (APIView):
-
-    def __init__(self, model, serializer):
-        self.boilerModel = model
-        self.boilerSerializer = serializer
-    
-    def get_object(self, id):
-        try:
-            return self.boilerModel.objects.get(id=id)
-        except self.boilerModel.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-    
-    def get(self, request, id):
-        instance = self.get_object(id)
-        serializer = self.boilerSerializer(instance)
-        return Response(serializer.data)
-    
-    def put(self, request, id):
-        instance = self.get_object(id)
-        serializer = self.boilerSerializer(instance, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-    
-    def patch(self, request, id):
-        instance = self.get_object(id)
-        serializer = self.boilerSerializer(instance, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-
-    def delete(self, request, id):
-        instance = self.get_object(id)
-        instance.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-
-
-class ProductAPIView (BoilerClass):
-    
-    def __init__(self):
-        super().__init__(model=Product, serializer=ProductSerializer, fields=[
+        products = Product.objects.all()
+        serializer = ProductSerializer(products, many=True, fields=[
             'id',
             'name', 
             'price',
@@ -80,26 +24,98 @@ class ProductAPIView (BoilerClass):
             'discounted_price', 
             'thumbnail'
         ])
+        return Response(serializer.data)
+
+    def post(self, request):
+        print(request.data)
+        serializer = ProductSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ProductDetailsAPIView (BoilerClassForIndividuals):
-    def __init__(self):
-        super().__init__(model=Product, serializer=ProductSerializer)
+class ProductDetailsAPIView (APIView):
+
+    def get_object(self, id):
+        try:
+            return Product.objects.get(id=id)
+        except Product.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     
+    def get(self, request, id):
+        product = self.get_object(id)
+        serializer = ProductSerializer(product)
+        return Response(serializer.data)
+    
+    def put(self, request, id):
+        product = self.get_object(id)
+        serializer = ProductSerializer(product, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+    
+    def patch(self, request, id):
+        product = self.get_object(id)
+        serializer = ProductSerializer(product, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+    def delete(self, request, id):
+        product = self.get_object(id)
+        product.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class CustomerAPIView (BoilerClass):
+class CustomerAPIView (APIView):
 
-    def __init__(self):
-        super().__init__(model=Customer, serializer=CustomerSerializer, fields=[
+    def get(self, request):
+        customers = Customer.objects.all()
+        serializer = CustomerSerializer(customers, many=True, fields=[
             'id',
             'name', 
             'email',
             'mobile_number', 
             'profile_picture'
         ])
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = CustomerSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class CustomerDetailsAPIView (APIView):
-    def __init__(self):
-        super().__init__(model=Customer, serializer=CustomerSerializer)
+
+    def get_object(self, id):
+        try:
+            return Customer.objects.get(id=id)
+        except Customer.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+    
+    def get(self, request, id):
+        customer = self.get_object(id)
+        serializer = CustomerSerializer(customer)
+        return Response(serializer.data)
+    
+    def put(self, request, id):
+        customer = self.get_object(id)
+        serializer = CustomerSerializer(customer, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+    
+    def patch(self, request, id):
+        customer = self.get_object(id)
+        serializer = CustomerSerializer(product, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+    def delete(self, request, id):
+        customer = self.get_object(id)
+        customer.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
