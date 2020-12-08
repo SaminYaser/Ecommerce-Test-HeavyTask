@@ -9,11 +9,13 @@ from rest_framework.views import APIView
 from .models import Product, Customer
 from .serializers import ProductSerializer, CustomerSerializer
 
-# Create your views here.
-
 class BoilerClass (APIView):
+    """
+    A boiler class to handle bulk get and post methods for models.
+    """
 
-    def __init__(self, model, serializer, fields):
+    def __init__(self, model, serializer, fields=None):
+        # Pass fields list to choose keys for get method
         self.boilerModel = model
         self.boilerSerializer = serializer
         self.bulkGetFields = fields
@@ -31,12 +33,16 @@ class BoilerClass (APIView):
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 class BoilerClassForIndividuals (APIView):
+    """
+    A boiler class to handle get, put, patch, delete methods for models.
+    """
 
     def __init__(self, model, serializer):
         self.boilerModel = model
         self.boilerSerializer = serializer
     
     def get_object(self, id):
+        # Function to retrieve data from database
         try:
             return self.boilerModel.objects.get(id=id)
         except self.boilerModel.DoesNotExist:
@@ -66,7 +72,8 @@ class BoilerClassForIndividuals (APIView):
         instance.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
+# Product Views classes
+## /products/
 class ProductAPIView (BoilerClass):
     
     def __init__(self):
@@ -78,14 +85,15 @@ class ProductAPIView (BoilerClass):
             'discounted_price', 
             'thumbnail'
         ])
-
-
+## /products/:id        
 class ProductDetailsAPIView (BoilerClassForIndividuals):
     def __init__(self):
         super().__init__(model=Product, serializer=ProductSerializer)
     
 
 
+# Customer Views classes
+## /customers/
 class CustomerAPIView (BoilerClass):
 
     def __init__(self):
@@ -96,8 +104,7 @@ class CustomerAPIView (BoilerClass):
             'mobile_number', 
             'profile_picture'
         ])
-
-
+## /customers/:id/
 class CustomerDetailsAPIView (APIView):
     def __init__(self):
         super().__init__(model=Customer, serializer=CustomerSerializer)
