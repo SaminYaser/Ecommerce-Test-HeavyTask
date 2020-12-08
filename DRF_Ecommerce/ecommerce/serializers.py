@@ -43,7 +43,6 @@ class ProductSerializer (DynamicFieldsModelSerializer):
         ]
 
 class CustomerSerializer (DynamicFieldsModelSerializer):
-    id = serializers.IntegerField()
     saved_addresses = serializers.ListField(child=serializers.JSONField())
 
     class Meta:
