@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product
+from .models import Product, Customer
 
 class DynamicFieldsModelSerializer(serializers.ModelSerializer):
     """
@@ -22,8 +22,8 @@ class DynamicFieldsModelSerializer(serializers.ModelSerializer):
                 self.fields.pop(field_name)
 
 class ProductSerializer (DynamicFieldsModelSerializer):
-    gallery = serializers.ListField(child=serializers.URLField(max_length=1000))
-    available_colors = serializers.ListField(child=serializers.CharField(max_length=1000))
+    gallery = serializers.ListField(child=serializers.CharField(max_length=1000))
+    available_colours = serializers.ListField(child=serializers.CharField(max_length=1000))
     available_sizes = serializers.ListField(child=serializers.CharField(max_length=1000))
     
     class Meta:
@@ -37,7 +37,23 @@ class ProductSerializer (DynamicFieldsModelSerializer):
             'thumbnail', 
             'gallery', 
             'rating', 
-            'available_colors', 
+            'available_colours', 
             'available_sizes', 
             'description'
+        ]
+
+class CustomerSerializer (DynamicFieldsModelSerializer):
+    id = serializers.IntegerField()
+    saved_addresses = serializers.ListField(child=serializers.JSONField())
+
+    class Meta:
+        model = Customer
+        fields = [
+            'id',
+            'name',
+            'email',
+            'mobile_number',
+            'profile_picture',
+            'permanent_address',
+            'saved_addresses'
         ]
