@@ -27,8 +27,46 @@ Installing djangorestframework
 ```bash
 pip3 install djangorestframework
 ```
-[Installing PostgreSQL](https://www.howtoforge.com/tutorial/how-to-install-django-with-postgresql-and-nginx-on-ubuntu-16-04/)
-
+Installing phonenumber_field
+```bash
+pip3 install django-phonenumber-field
+pip3 install phonenumbers
+```
+Installing PostgreSQL in your local server and setting it up.
+* Install PostgreSQL
+```bash
+sudo apt-get install gunicorn postgresql postgresql-contrib libpq-dev psycopg2
+```
+* Create a Database and Database User
+```bash
+sudo -u postgres psql
+CREATE DATABASE django_db;
+CREATE USER myprojectuser WITH PASSWORD 'password';
+ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myprojectuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE django_db TO myprojectuser;
+\q
+```
+* Replace this instead of Database section in DRF_Ecommerce/settings.py
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+```
+* Migrating and Testing Database
+```bash
+cd DRF_Ecommerce/
+python manage.py makemigrations
+python manage.py migrate
+```
 
 ### Running the server
 
@@ -36,6 +74,12 @@ Enter the Django directory and run the following command.
 
 ```bash
 python3 manage.py runserver
+```
+
+* Allow external connections by typing
+```bash
+sudo ufw allow 8000
+ython manage.py runserver 0.0.0.0:8000
 ```
 
 ## API Reference
